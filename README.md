@@ -16,7 +16,7 @@ effects, and thus were expected to be more an indication of the microclimate cre
 Each mote had 4 sensors, one for temperature, humidity, ambient and direct photosynthetically active solar radiation (hamatop
 and hamabot respectively). The design of the mote seemed reasonably thought out to measure these quantities properly.
 For instance the ambient PAR sensor was sheltered but had wide reach, and mote sensors were calibrated to ensure measurements
-between motes agreed within reasonable levels.
+between motes agreed within reasonable levels. More details about the dataset can be found in **background_readings**.
 
 Data Collection
 ==============
@@ -24,10 +24,11 @@ Data Collection
 The data was collected via wireless download every 5 minutes, comprising the net dataset, and was recorded locally on a 512
 kB chip (enough for the duration of the measurements, unless the chip was partially full from testing), comprising the log
 dataset. This turned out to be useful redundancy, since during the data cleaning, one can check that the intersection of their
-recorded values was 60% of the net data and only 20% (approx.) of log data.
+recorded values was 60% of the net data and only 20% (approx.) of log data. This raw data can all be found in the **Data** folder. 
 
+Data Cleaning
+==============
 
-2.2 Data Cleaning
 The data cleaning is best summarized in two parts. I first systematically checked the hamatop, hamabot, temperature,
 humidity and voltage measurements of both net and log datasets for abnormalities, plotting against epoch as a guide. In the
 second part, I combined net, log and locs data, and verified the all dataset had no extra information. Details and code are
@@ -36,4 +37,9 @@ Redwood paper’s outlier rejection).
 
 ===============
 
-Details for the datacleaning, EDA and lots of plots can be found in the [writeup](writeup.md). The code for data analysis is found in the data_analysis_code files.   
+Details for the datacleaning, EDA and lots of plots can be found in the [Analysis_report](Analysis_report.pdf). 
+
+===============
+The code for data analysis is found in the **Data_analysis_code** files.  
+
+
